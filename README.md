@@ -2,6 +2,7 @@
 ## Bundle 1
 ### Exercise 1 – Git Basics
 
+```bash
 mkdir git-exercise
 cd git-exercise
 git init
@@ -16,9 +17,10 @@ git checkout -b dev
 git checkout -b test
 git checkout dev
 git branch -d test
+```
 
 ### Exercise 2 – Git Stash and Reset
-
+```bash
 cd C:\Users\HP\git-exercise
 git status
 
@@ -54,3 +56,4 @@ git status
 git reset --hard HEAD
 git status
 
+```
