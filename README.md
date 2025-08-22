@@ -135,3 +135,67 @@ git commit -m "fix: resolved merge conflict from main"
 # Push the final, resolved changes to the remote branch
 git push origin ft/service-redesign
 ```
+
+
+##### Bundle 3
+### Exercise1
+
+```bash
+# Create the team page branch
+git checkout main
+git checkout -b ft/team-page
+echo "<h1>Our Team</h1>" > team.html
+git add team.html
+git commit -m "feat: Add team page"
+git push -u origin ft/team-page
+
+# Go back to main and create the contact page branch
+git checkout main
+git checkout -b ft/contact-page
+
+# Find and cherry-pick the team page commit
+git log --oneline ft/team-page
+# (Copy the hash you find)
+git cherry-pick <team-commit-hash>
+
+# Complete the contact page and push
+echo "<h1>Contact Us</h1>" > contact.html
+git add contact.html
+git commit -m "feat: Add contact page"
+git push -u origin ft/contact-page
+
+# Create the faq page branch
+git checkout -b ft/faq-page
+echo "<h1>FAQs</h1>" > faq.html
+git add faq.html
+git commit -m "feat: Add faq page"
+git push -u origin ft/faq-page
+
+# Revert the cherry-picked commit and push
+git revert <team-commit-hash>
+git push
+
+```
+## Exercise2
+
+```bash
+# Create the home page redesign branch
+git checkout ft/faq-page
+git checkout -b ft/home-page-redesign
+
+# Go to main and make a new commit
+git checkout main
+echo "body {color: blue;}" > style.css
+git add style.css
+git commit -m "feat: Add new CSS file"
+git push origin main
+
+# Switch back, rebase, and make your final changes
+git checkout ft/home-page-redesign
+git rebase main
+echo "<h1>Welcome to the new homepage!</h1>" > home.html
+git add home.html
+git commit -m "feat: redesign homepage"
+git push -u origin ft/home-page-redesign
+
+```
