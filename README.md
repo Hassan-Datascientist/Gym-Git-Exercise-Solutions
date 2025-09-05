@@ -216,3 +216,23 @@ git push origin main
 git push git-copy main
 
 ```
+###### Bundle4
+## Exercise2
+
+```bash
+# Switch to the main branch in your solution repo
+git checkout main
+
+# Copy the home.html file from your original project to the solution repo
+copy C:\Users\HP\git-exercise\home.html .
+
+# Stage the new file for commit
+git add home.html
+
+# Commit the file with a descriptive message
+git commit -m "feat: Add solution for Bundle 4 Exercise 1"
+
+# Push the commit to your solution repository on GitHub
+git push origin main
+
+```
