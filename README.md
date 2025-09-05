@@ -199,3 +199,20 @@ git commit -m "feat: redesign homepage"
 git push -u origin ft/home-page-redesign
 
 ```
+###### Bundle4
+## Exercise1
+
+```bash
+# Checkout the main branch
+git checkout main
+
+# Create a new file for the exercise
+echo "<h1>Hello This is Bundle 4 Exercise</h1>" > home.html
+git add home.html
+git commit -m "feat: Add home.html for Bundle 4 Exercise 1"
+
+# Push changes to both remotes
+git push origin main
+git push git-copy main
+
+```
